@@ -200,6 +200,7 @@ button {
   transform: translateY(-3.5px) rotate(-45deg);
 }
 
+
 /* HERO */
 .hero {
   position: relative;
@@ -216,32 +217,33 @@ button {
 /* 背景動画 */
 .hero-video {
   position: absolute;
-  z-index: -3;
+  z-index: 0;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-/* 動画の上に白い膜を重ねる */
+/* 白いオーバーレイ */
 .hero-overlay {
   position: absolute;
-  z-index: -2;
+  z-index: 1;
   inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,.94) 0%,
-      rgba(255,255,255,.83) 42%,
-      rgba(255,255,255,.42) 100%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,.94) 0%,
+    rgba(255,255,255,.83) 42%,
+    rgba(255,255,255,.42) 100%
+  );
+  pointer-events: none;
 }
 
 /* GIF */
 .hero-gif {
   position: absolute;
-  z-index: -1;
+  z-index: 2;
   top: 50%;
   right: 7%;
   display: flex;
@@ -264,114 +266,14 @@ button {
 /* HERO CONTENT */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: min(65%, 760px);
 }
 
-.eyebrow,
-.section-label {
-  color: var(--red);
-  font-family: var(--font-en);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.eyebrow span {
-  display: inline-block;
-  width: 27px;
-  height: 2px;
-  background: var(--red);
-}
-
-.hero h1 {
-  margin: 25px 0;
-  font-family: var(--font-en);
-  font-size: clamp(76px, 10vw, 145px);
-  font-weight: 900;
-  line-height: .77;
-  letter-spacing: -2px;
-}
-
-.hero h1 span,
-.section-heading h2 span,
-.concept h2 span,
-.final-cta h2 span {
-  color: var(--red);
-}
-
-.hero-description {
-  margin: 35px 0 8px;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 2;
-}
-
-.hero-sub {
-  color: #777;
-  font-family: var(--font-en);
-  font-size: 12px;
-  letter-spacing: 3px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  margin-top: 35px;
-}
-
-.button {
-  display: inline-flex;
-  min-height: 54px;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 0 25px;
-  border: 1px solid transparent;
-  font-family: var(--font-en);
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 1.3px;
-  transition: background .25s, border .25s, transform .25s;
-}
-
-.button:hover {
-  transform: translateY(-3px);
-}
-
-.button-primary {
-  background: var(--red);
-  color: #fff;
-}
-
-.button-primary:hover {
-  background: #c91627;
-}
-
-.button-outline {
-  border-color: #777;
-  background: rgba(255,255,255,.7);
-  color: #171717;
-}
-
-.button-outline:hover {
-  border-color: var(--red);
-  background: #fff;
-}
-
-.button span {
-  font-size: 18px;
-}
-
+/* 装飾 */
 .hero-side-text {
   position: absolute;
+  z-index: 3;
   top: 50%;
   right: 2%;
   color: rgba(0,0,0,.4);
@@ -383,6 +285,7 @@ button {
 
 .hero-scroll {
   position: absolute;
+  z-index: 3;
   bottom: 35px;
   left: 6%;
   display: flex;
@@ -402,6 +305,7 @@ button {
 
 .hero-number {
   position: absolute;
+  z-index: 3;
   right: 6%;
   bottom: 32px;
   font-family: var(--font-en);
@@ -413,6 +317,7 @@ button {
   color: #888;
   font-size: 13px;
 }
+
 
 /* COMMON SECTION */
 .section {

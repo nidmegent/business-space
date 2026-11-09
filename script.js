@@ -1,25 +1,31 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   // LOADER
   const loader = document.getElementById("loader");
 
-  window.addEventListener("load", () => {
+  const hideLoader = () => {
     setTimeout(() => {
       loader?.classList.add("is-hidden");
     }, 500);
-  });
+  };
 
-  // 年表示
+  if (document.readyState === "complete") {
+    hideLoader();
+  } else {
+    window.addEventListener("load", hideLoader, { once: true });
+  }
+
+  // YEAR
   const year = document.getElementById("year");
   if (year) {
     year.textContent = new Date().getFullYear();
   }
 
-  // HEADER SCROLL
+  // HEADER
   const header = document.getElementById("header");
 
   const updateHeader = () => {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 30);
+    header?.classList.toggle("scrolled", window.scrollY > 30);
   };
 
   window.addEventListener("scroll", updateHeader);
@@ -42,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
   });
 
-  nav?.querySelectorAll('a[href^="#"]').forEach((link) => {
+  nav?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
 
@@ -70,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 
-  // FAQ: 一度に開く項目を1つにする
+  // FAQ
   const faqItems = document.querySelectorAll(".faq-item");
 
   faqItems.forEach((item) => {
@@ -84,4 +90,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // HERO VIDEO
+  const heroVideo = document.querySelector(".hero-video");
+
+  if (heroVideo) {
+    const playVideo = () => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        heroVideo.pause();
+        return;
+      }
+
+      const playPromise = heroVideo.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // ブラウザが自動再生を許可しない場合は静止表示
+        });
+      }
+    };
+
+    playVideo();
+  }
 });

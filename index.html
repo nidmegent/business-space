@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="NIDMEGENT BUSINESS SPACE - 事業者・団体・個人をつなぎ、ビジネスの可能性を広げるコミュニティ。">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="NIDMEGENT BUSINESS SPACE - 人と人、事業と事業をつなぎ、新しい可能性を生み出すビジネスコミュニティ。">
   <title>NBS | NIDMEGENT BUSINESS SPACE</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
   </div>
 
   <header class="header" id="header">
-    <a class="brand" href="#top" aria-label="NBS トップ">
+    <a class="brand" href="#top">
       <span class="brand-mark">NBS<span>.</span></span>
       <span class="brand-name">NIDMEGENT BUSINESS SPACE</span>
     </a>
@@ -39,20 +41,40 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-glow"></div>
 
+    <!-- HERO -->
+    <section class="hero">
+
+      <!-- 背景動画 -->
+      <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+
+      <!-- 動画を見やすくする白いオーバーレイ -->
+      <div class="hero-overlay"></div>
+
+      <!-- GIFレイヤー -->
+      <div class="hero-gif">
+        <img src="assets/hero-animation.gif" alt="" fetchpriority="high">
+      </div>
+
+      <!-- メインコンテンツ -->
       <div class="hero-content reveal">
         <p class="eyebrow"><span></span> BUSINESS COMMUNITY BY NIDMEGENT</p>
-        <h1>CONNECT.<br>SUPPORT.<br><span>GROW.</span></h1>
+
+        <h1>
+          CONNECT.<br>
+          SUPPORT.<br>
+          <span>GROW.</span>
+        </h1>
+
         <p class="hero-description">
-          人と人、事業と事業をつなぎ、<br class="sp-only">
+          人と人、事業と事業をつなぎ、<br>
           新しい可能性を生み出す。
         </p>
-        <p class="hero-sub">
-          NIDMEGENT BUSINESS SPACE
-        </p>
+
+        <p class="hero-sub">NIDMEGENT BUSINESS SPACE</p>
+
         <div class="hero-actions">
           <a href="#plans" class="button button-primary">VIEW PLANS <span>↘</span></a>
           <a href="https://nidmegent.github.io/official/contact.html" target="_blank" rel="noopener noreferrer" class="button button-outline">CONTACT <span>↗</span></a>
@@ -64,6 +86,7 @@
       <div class="hero-number">01 <span>/ 04</span></div>
     </section>
 
+    <!-- ABOUT -->
     <section class="intro section" id="about">
       <div class="section-heading reveal">
         <p class="section-label">01 / ABOUT</p>
@@ -71,10 +94,7 @@
       </div>
 
       <div class="intro-content reveal">
-        <p class="intro-lead">
-          ビジネスの可能性は、<br>
-          つながりから生まれる。
-        </p>
+        <p class="intro-lead">ビジネスの可能性は、<br>つながりから生まれる。</p>
         <p class="body-text">
           NIDMEGENT BUSINESS SPACE（NBS）は、幅広い業界の団体・事業者・個人がつながり、
           情報を共有し、それぞれの活動や事業を支え合うためのビジネスコミュニティです。
@@ -87,6 +107,7 @@
       </div>
     </section>
 
+    <!-- CONCEPT -->
     <section class="concept section">
       <div class="concept-inner reveal">
         <p class="section-label">OUR CONCEPT</p>
@@ -101,6 +122,7 @@
       </div>
     </section>
 
+    <!-- BENEFITS -->
     <section class="benefits section" id="benefits">
       <div class="section-heading reveal">
         <p class="section-label">02 / BENEFITS</p>
@@ -139,6 +161,7 @@
       </div>
     </section>
 
+    <!-- PLANS -->
     <section class="plans section" id="plans">
       <div class="section-heading reveal">
         <p class="section-label">03 / MEMBERSHIP PLANS</p>
@@ -156,7 +179,7 @@
           </div>
           <div class="plan-description">まずはNBSとつながりたい方へ。</div>
           <ul class="plan-features">
-            <li class="included">公開予定情報の先行閲覧</li>
+            <li>公開予定情報の先行閲覧</li>
           </ul>
           <a class="button button-plan" href="https://nidmegent.github.io/official/contact.html" target="_blank" rel="noopener noreferrer">このプランについて問い合わせる <span>↗</span></a>
         </article>
@@ -170,11 +193,11 @@
           </div>
           <div class="plan-description">ブランド発信やWeb活用を始めたい方へ。</div>
           <ul class="plan-features">
-            <li class="included">Aプランの全特典</li>
-            <li class="included">NBSロゴの使用</li>
-            <li class="included">Webサイト制作</li>
-            <li class="included">Webサイト修正：毎月2回まで</li>
-            <li class="included">HTML・CSS・JSファイルで納品</li>
+            <li>BプランではなくAプランの全特典</li>
+            <li>NBSロゴの使用</li>
+            <li>Webサイト制作</li>
+            <li>Webサイト修正：毎月2回まで</li>
+            <li>HTML・CSS・JSファイルで納品</li>
           </ul>
           <a class="button button-plan" href="https://nidmegent.github.io/official/contact.html" target="_blank" rel="noopener noreferrer">このプランについて問い合わせる <span>↗</span></a>
         </article>
@@ -189,11 +212,11 @@
           </div>
           <div class="plan-description">大会や公式サイトを通じて活動を広げたい方へ。</div>
           <ul class="plan-features">
-            <li class="included">Bプランの全特典</li>
-            <li class="included">Nidmegent主催大会での告知画像掲載</li>
-            <li class="included">大会内での加入者紹介</li>
-            <li class="included">公式サイト SPONSOR「PARTNER」掲載</li>
-            <li class="included">Webサイト修正：毎月5回まで</li>
+            <li>Bプランの全特典</li>
+            <li>Nidmegent主催大会での告知画像掲載</li>
+            <li>大会内での加入者紹介</li>
+            <li>公式サイト SPONSOR「PARTNER」掲載</li>
+            <li>Webサイト修正：毎月5回まで</li>
           </ul>
           <a class="button button-primary button-plan" href="https://nidmegent.github.io/official/contact.html" target="_blank" rel="noopener noreferrer">このプランについて問い合わせる <span>↗</span></a>
         </article>
@@ -207,9 +230,9 @@
           </div>
           <div class="plan-description">より広い露出と継続的なサポートを求める方へ。</div>
           <ul class="plan-features">
-            <li class="included">Cプランの全特典</li>
-            <li class="included">公式サイト SPONSOR「SPONSOR」掲載</li>
-            <li class="included">Webサイト修正：毎月7回まで</li>
+            <li>Cプランの全特典</li>
+            <li>公式サイト SPONSOR「SPONSOR」掲載</li>
+            <li>Webサイト修正：毎月7回まで</li>
           </ul>
           <a class="button button-plan" href="https://nidmegent.github.io/official/contact.html" target="_blank" rel="noopener noreferrer">このプランについて問い合わせる <span>↗</span></a>
         </article>
@@ -219,6 +242,7 @@
       <p class="plan-note">※ Webサイト制作・修正の内容や対応範囲、納期については事前にご相談のうえ決定します。</p>
     </section>
 
+    <!-- COMPARISON -->
     <section class="comparison section">
       <div class="section-heading reveal">
         <p class="section-label">PLAN COMPARISON</p>
@@ -230,10 +254,7 @@
           <thead>
             <tr>
               <th>特典・サービス</th>
-              <th>A</th>
-              <th>B</th>
-              <th class="highlight-column">C</th>
-              <th>D</th>
+              <th>A</th><th>B</th><th class="highlight-column">C</th><th>D</th>
             </tr>
           </thead>
           <tbody>
@@ -250,6 +271,7 @@
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="faq section" id="faq">
       <div class="section-heading reveal">
         <p class="section-label">04 / FAQ</p>
@@ -284,8 +306,8 @@
       </div>
     </section>
 
+    <!-- FINAL CTA -->
     <section class="final-cta">
-      <div class="final-cta-bg"></div>
       <div class="final-cta-content reveal">
         <p class="section-label">LET'S BUILD THE FUTURE</p>
         <h2>YOUR NEXT<br><span>CONNECTION</span><br>STARTS HERE.</h2>

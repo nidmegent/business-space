@@ -1119,3 +1119,37 @@ button {
     transform: none;
   }
 }
+
+
+/* HERO GIF：中央固定・最終調整 */
+.hero-gif {
+  position: absolute !important;
+
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  width: min(55vw, 620px) !important;
+  height: min(55vw, 620px) !important;
+
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero-gif img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+@media (max-width: 760px) {
+  .hero-gif {
+    width: min(72vw, 380px) !important;
+    height: min(72vw, 380px) !important;
+  }
+}
